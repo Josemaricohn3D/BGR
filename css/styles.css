@@ -1,0 +1,134 @@
+body{
+    margin: 0%;
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.alas{
+    width:20%;
+    /* background-color: red; */
+}
+
+#alasDER{
+    transform: scaleX(-1);
+}
+
+#INICIAR{
+    width: 25%;
+    height: 30%;
+    position: absolute;
+    bottom: 10%;
+    z-index: 5;
+    /* background-color: red; */
+    animation: botonJ 1s linear alternate infinite,
+                aparecerJ 1s 3s backwards ease-in;
+
+}
+
+#INICIAR img{
+    width: 100%;
+    filter: drop-shadow(0 0 .9rem rgb(151, 5, 5));
+}
+
+section{
+    background-color: red;
+    margin-top: -10%;
+    height: 600px;
+    width: 600px;
+    background-image: url(/img/mariposa_portada.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+
+#videoRR{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#cancionFondo{
+    position: absolute;
+    z-index: -1;
+    opacity: 0%;
+}
+
+#B{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    /* opacity: 50%; */
+    /* background-color: red; */
+    filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
+    animation: aparecer 1s cubic-bezier(.73,.19,.85,.21),
+                opacidad 1s backwards cubic-bezier(1,.02,1,.24);
+}
+
+#G{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
+    animation: aparecer 1s 1s cubic-bezier(.73,.19,.85,.21),
+                opacidad 1s 1s backwards cubic-bezier(1,.02,1,.24);
+}
+
+#R{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
+    animation: aparecer 1s 2s cubic-bezier(.73,.19,.85,.21),
+                opacidad 1s 2s backwards cubic-bezier(1,.02,1,.24);
+}
+
+
+@keyframes botonJ{
+    from{
+        transform: rotate(30deg);
+    }
+
+    to{
+        transform: rotate(-30deg)
+    }
+}
+
+@keyframes aparecerJ {
+    from{
+        transform: scale(0%) ;
+    }
+
+    to{
+        transform: scale(100%);
+    }
+}
+
+@keyframes aparecer {
+    from{
+        transform: scale(500%) translateZ(-1000px);
+    }
+
+    to{
+        transform: scale(100%) translateZ(0px);
+    }
+}
+
+@keyframes opacidad {
+    from{
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 100%;
+    }
+}
