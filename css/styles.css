@@ -33,25 +33,22 @@ body{
 #INICIAR img{
     width: 100%;
     filter: drop-shadow(0 0 .9rem rgb(151, 5, 5));
+    transition: 1s;
 }
 
 section{
-    background-color: red;
+    /* background-color: red; */
     margin-top: -10%;
     height: 600px;
     width: 600px;
-    background-image: url(/img/mariposa_portada.png);
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
-    
 }
 
-#videoRR{
-    position: absolute;
+#PORTADA{
     width: 100%;
     height: 100%;
     z-index: 0;
+    animation: aparecerP 5s ease-in backwards;
 }
 
 #cancionFondo{
@@ -92,6 +89,28 @@ section{
                 opacidad 1s 2s backwards cubic-bezier(1,.02,1,.24);
 }
 
+#INICIAR:hover img{
+    transform: scale(120%);
+    filter: drop-shadow(0 0 .6rem rgb(255, 0, 0));
+}
+
+#video{
+    width: 100%;
+    /* height: 100%; */
+    z-index: -2;
+    position: absolute;
+}
+
+
+@keyframes aparecerP {
+    from{
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 100%;
+    }
+}
 
 @keyframes botonJ{
     from{
