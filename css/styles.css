@@ -224,3 +224,57 @@ section{
         opacity: 100%;
     }
 }
+
+
+/* NIVEL 1 */
+
+#circulo1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 10%;
+    border-radius: 50%;
+    background-color: red;
+    animation: aparecer 1s 1s  linear ;
+}
+#circulo2{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 10%;
+    border-radius: 50%;
+    background-color: red;
+    animation: aparecer 1s  linear ;
+}
+
+#circulo3{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 40%;
+    border-radius: 50%;
+    background-color: red;
+    animation: aparecer 1s 2s  linear ;
+}
+
+.desaparecer{
+    display: block;
+}
+
+/* @keyframes mover{
+    from{
+        transform:translateY(0%)
+    }
+    to{
+        transform:translateY(100%)
+    }
+} */
+
+@keyframes aparecer {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
