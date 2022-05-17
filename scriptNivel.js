@@ -1,13 +1,11 @@
-// NIVEL1 
-
 let circulo = document.getElementById("circulo1");
-const el = circulo.getBoundingClientRect();
-let circulos = document.getElementById("circulo1","circulo2", "circulo3");
+let Nombre = sessionStorage.getItem("Nombre");
+console.log(Nombre);
+
+console.log("Hola")
 
 function desaparecer(){
-    circulos.classList.toggle("desaparecer")
+    $(this).css("display", "none")
 }
 
-circulos.
-console.log(el.left.toFixed())
-
+$(".circulos").click(desaparecer);

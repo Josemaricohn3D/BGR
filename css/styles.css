@@ -15,81 +15,88 @@ body{
     align-items: center;
 }
 
-#iniciar{
-    width: 25%;
-    height: 30%;
-    position: absolute;
-    bottom: 10%;
-    z-index: 5;
-    /* background-color: red; */
-    animation: botonJ 1s linear alternate infinite,
-                aparecerJ 1s 3s backwards ease-in;
 
-}
-
-#iniciar img{
+#portada{
     width: 100%;
-    filter: drop-shadow(0 0 .9rem rgb(151, 5, 5));
-    transition: 1s;
-}
-
-section{
-    /* background-color: red; */
-    margin-top: -10%;
     height: 100vh;
-    width: 60%;
-    position: relative;
-}
-
-#PORTADA{
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    animation: aparecerP 5s ease-in backwards;
-}
-
-#cancionFondo{
-    position: absolute;
-    z-index: -1;
-    opacity: 0%;
-}
-
-#B{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 3;
-    /* opacity: 50%; */
+    display: block;
     /* background-color: red; */
-    filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
-    animation: aparecer 1s cubic-bezier(.73,.19,.85,.21),
-                opacidad 1s backwards cubic-bezier(1,.02,1,.24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#G{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 2;
-    filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
-    animation: aparecer 1s 1s cubic-bezier(.73,.19,.85,.21),
-                opacidad 1s 1s backwards cubic-bezier(1,.02,1,.24);
-}
+    #iniciar{
+        width: 25%;
+        height: 30%;
+        position: absolute;
+        bottom: 10%;
+        z-index: 5;
+        cursor: pointer;
+        /* background-color: red; */
+        animation: botonJ 1s linear alternate infinite,
+                    aparecerJ 1s 3s backwards ease-in;
 
-#R{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
-    animation: aparecer 1s 2s cubic-bezier(.73,.19,.85,.21),
-                opacidad 1s 2s backwards cubic-bezier(1,.02,1,.24);
-}
+    }
 
-#iniciar:hover img{
-    transform: scale(120%);
-    filter: drop-shadow(0 0 .6rem rgb(255, 0, 0));
-}
+    #iniciar img{
+        width: 100%;
+        filter: drop-shadow(0 0 .9rem rgb(10, 151, 5));
+        transition: 1s;
+    }
+
+    #iniciar:hover img{
+        transform: scale(120%);
+        filter: drop-shadow(0 0 .6rem rgb(60, 255, 0));
+    }
+    
+    section{
+        /* background-color: red; */
+        margin-top: -10%;
+        height: 100vh;
+        width: 60%;
+        position: relative;
+    }
+
+
+    #cancionFondo{
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+    }
+
+    #B{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 3;
+        /* opacity: 50%; */
+        /* background-color: red; */
+        filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
+        animation: aparecer 1s cubic-bezier(.73,.19,.85,.21),
+                    opacidad 1s backwards cubic-bezier(1,.02,1,.24);
+    }
+
+    #G{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
+        animation: aparecer 1s 1s cubic-bezier(.73,.19,.85,.21),
+                    opacidad 1s 1s backwards cubic-bezier(1,.02,1,.24);
+    }
+
+    #R{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
+        animation: aparecer 1s 2s cubic-bezier(.73,.19,.85,.21),
+                    opacidad 1s 2s backwards cubic-bezier(1,.02,1,.24);
+    }
+
 
 #video{
     height: 100%;
@@ -157,6 +164,7 @@ section{
         width: 50%;
         height: 100%;
         transition: all 2s;
+        cursor: pointer;
         text-indent: -99999px;
     }
 
@@ -226,51 +234,56 @@ section{
 }
 
 
+
+
 /* NIVEL 1 */
 
-#circulo1{
-    width: 100px;
-    height: 100px;
+#Nivel1{
     position: absolute;
-    left: 10%;
-    border-radius: 50%;
-    background-color: red;
-    animation: aparecer 1s 1s  linear ;
-}
-#circulo2{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    right: 10%;
-    border-radius: 50%;
-    background-color: red;
-    animation: aparecer 1s  linear ;
+    z-index: 13;
+    /* background-color: red; */
+    width: 100%;
+    height: 100vh;
+    /* right: -100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#circulo3{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    right: 40%;
-    border-radius: 50%;
-    background-color: red;
-    animation: aparecer 1s 2s  linear ;
-}
-
-.desaparecer{
-    display: block;
-}
-
-/* @keyframes mover{
-    from{
-        transform:translateY(0%)
+    #circulo1{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: 40%;
+        border-radius: 50%;
+        background-color: red;
+        animation: aparecerBola 1s linear;
     }
-    to{
-        transform:translateY(100%)
+    #circulo2{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: 10%;
+        border-radius: 50%;
+        background-color: red;
+        animation: aparecerBola 1s 1s linear;
     }
-} */
 
-@keyframes aparecer {
+    #circulo3{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left:10%;
+        border-radius: 50%;
+        background-color: red;
+        animation: aparecerBola 1s 2s linear ;
+    }
+
+    .circulos{
+        cursor: pointer;
+    }
+
+@keyframes aparecerBola {
     from{
         opacity: 0;
     }
