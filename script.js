@@ -3,30 +3,37 @@ let titulo = document.getElementById("titulo");
 let pantallaNombre = document.getElementById("NombreUsuario");
 let usuario = document.getElementById("usuario");
 const formulario = document.getElementById("espacioN");
-let Nombre = document.getAttribute("value");
+let enviarN = document.getElementById("enviar");
 
-sessionStorage.setItem("Nombre", Nombre);
 
 // Iniciar sesion
 function nombre(){
     titulo.style.display = "none";
     boton.style.display = "none"
     pantallaNombre.style.left = "20%";
-
 }
 
-// ejecutar nombre
+// ejecutar Iniciar Sesion
 boton.addEventListener("click", nombre);
-// formulario.addEventListener ("submit", jugar);
-console.log ("Hola " + usuario.value)
 
-// Aparecer Nivel1
-
-
+// Redireccion a nivel
 function aparecerNivel(){
-    window.location.href = "Nivel1.html? + usuario.value"
-
+    window.location.href = "Nivel1.html?"
+    
 };
+
+// $( function() {
+//     $( "#dialog" ).dialog();
+//   } );
+
+// Saludar al usuario
+function saludar(){
+    alert("Hola, " + usuario.value + ". ¿Preparad@ para jugar? :)");
+}
+
+formulario.addEventListener("submit", saludar);
+
+// setTimeout(aparecerNivel, 5000);
 
 $("#enviar").click(aparecerNivel);
 

@@ -74,7 +74,7 @@ body{
         /* background-color: red; */
         filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
         animation: aparecer 1s cubic-bezier(.73,.19,.85,.21),
-                    opacidad 1s backwards cubic-bezier(1,.02,1,.24);
+                    opacidadTitulo 1s backwards cubic-bezier(1,.02,1,.24);
     }
 
     #G{
@@ -84,7 +84,7 @@ body{
         z-index: 2;
         filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
         animation: aparecer 1s 1s cubic-bezier(.73,.19,.85,.21),
-                    opacidad 1s 1s backwards cubic-bezier(1,.02,1,.24);
+                    opacidadTitulo 1s 1s backwards cubic-bezier(1,.02,1,.24);
     }
 
     #R{
@@ -94,7 +94,7 @@ body{
         z-index: 1;
         filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
         animation: aparecer 1s 2s cubic-bezier(.73,.19,.85,.21),
-                    opacidad 1s 2s backwards cubic-bezier(1,.02,1,.24);
+                    opacidadTitulo 1s 2s backwards cubic-bezier(1,.02,1,.24);
     }
 
 
@@ -171,15 +171,18 @@ body{
     #enviar:hover{
         transform:scale(150%);
     }
+    
+    
 
-@keyframes glow {
-    from{
-        box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
-    }
 
-    to{
-        box-shadow: 0px 0px 50px 20px rgb(255, 88, 205);
-    }
+#Mensaje{
+    width: 40%;
+    height: 80vh;
+    position: absolute;
+    border-radius: 10px;
+    margin: 0 auto;
+    z-index: 15;
+    background-color: red;
 }
 
 #NombreUsuario{
@@ -195,25 +198,25 @@ body{
     border-radius: 20px;
 }
 
-    #NombreUsuario h1{
-        font-family: rock;
-        color: white;
-        margin-top: 0%;
-        font-size: 150px;
-    }
+#NombreUsuario h1{
+    font-family: rock;
+    color: white;
+    margin-top: 0%;
+    font-size: 150px;
+}
 
-    #espacioN{
-        position: absolute;
-        /* background-color: blue; */
-        font-size: 20px;
-        bottom:20%;
+#espacioN{
+    position: absolute;
+    /* background-color: blue; */
+    font-size: 20px;
+    bottom:20%;
         width: 80%;
         height: 20%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
-
+    
     #usuario{
         border: none;
         border-radius: 20px;
@@ -227,7 +230,7 @@ body{
         background-color: transparent;
         animation: glow .5s linear infinite alternate;
     }
-
+    
     #enviar{
         cursor: pointer;
         background-color: transparent;
@@ -243,24 +246,24 @@ body{
         transition: all 2s;
         text-indent: -99999px;
     }
-
+    
     #enviar:hover{
         transform:scale(150%);
     }
-
-@keyframes glow {
-    from{
-        box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+    
+    @keyframes glow {
+        from{
+            box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+        }
+        
+        to{
+            box-shadow: 0px 0px 50px 20px rgb(255, 88, 205);
+        }
     }
 
-    to{
-        box-shadow: 0px 0px 50px 20px rgb(255, 88, 205);
-    }
-}
-
-
-@keyframes aparecerP {
-    from{
+    
+    @keyframes aparecerP {
+        from{
         opacity: 0%;
     }
 
@@ -299,7 +302,7 @@ body{
     }
 }
 
-@keyframes opacidad {
+@keyframes opacidadTitulo {
     from{
         opacity: 0%;
     }
@@ -316,7 +319,7 @@ body{
 
 #Nivel1{
     position: absolute;
-    z-index: 13;
+    z-index: 5;
     /* background-color: red; */
     width: 100%;
     height: 100vh;
@@ -326,44 +329,189 @@ body{
     align-items: center;
 }
 
+/* YOU DRIVE ME CRAZY */
     #circulo1{
-        width: 100px;
-        height: 100px;
         position: absolute;
-        right: 40%;
-        border-radius: 50%;
-        background-color: red;
-        animation: aparecerBola 1s linear;
+        left: 10%;
+        animation: aparecerBola 1s 7s linear ;
     }
     #circulo2{
-        width: 100px;
-        height: 100px;
         position: absolute;
-        right: 10%;
-        border-radius: 50%;
-        background-color: red;
-        animation: aparecerBola 1s 1s linear;
+        left: 30%;
+        animation: aparecerBola 1s 7.8s linear;
     }
 
     #circulo3{
+        position: absolute;
+        left: 50%;
+        animation: aparecerBola 1s 8.6s linear ;
+    }
+
+/* SING IT! */
+
+    #circulo4{
+        position: absolute;
+        left: 20%;
+        animation: aparecerBola 1s 11.5s linear ;
+    }
+
+/* OH OH OH */
+
+    #circulo5{
+        position: absolute;
+        left: 30%;
+        animation: aparecerBola 1s 12s linear ;
+    }
+
+    #circulo6{
+        position: absolute;
+        left: 40%;
+        animation: aparecerBola 1s 12.2s linear ;
+    }
+    
+    #circulo7{
+        position: absolute;
+        left: 50%;
+        animation: aparecerBola 1s 12.5s linear ;
+    }
+    
+/* CRA-ZY */
+
+    #circulo8{
+        position: absolute;
+        left: 70%;
+        animation: aparecerBola 1s 13s linear ;
+    }
+
+    #circulo9{
+        position: absolute;
+        left: 80%;
+        animation: aparecerBola 1s 13.5s linear ;
+    }
+
+/* YEAH YEAH YEAH */
+
+#circulo10{
+    position: absolute;
+    left: 10%;
+    animation: aparecerBola 1s 15.5s linear ;
+}
+
+#circulo11{
+    position: absolute;
+    left: 20%;
+    animation: aparecerBola 1s 16s linear ;
+}
+
+#circulo12{
+    position: absolute;
+    left: 30%;
+    animation: aparecerBola 1s 16.5s linear ;
+}
+
+/* UH, UH */
+
+
+#deslizar{
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(255, 0, 0); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: desapareceDragable 1s 22s linear forwards ;
+}
+
+#dragable{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+    cursor: pointer;
+    animation: aparecerBola 1s 17s linear backwards ;
+}
+
+#dropable{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+    cursor: pointer;
+    animation: aparecerBola 1s 17s linear backwards ;
+}
+
+/* LOCURA */
+
+#locura{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    z-index: 6;
+}
+
+    .circulos{
         width: 100px;
         height: 100px;
         position: absolute;
-        left:10%;
+        z-index: 3;
+        left:20%;
+        transform: scale(0%);
         border-radius: 50%;
-        background-color: red;
-        animation: aparecerBola 1s 2s linear ;
-    }
-
-    .circulos{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
         cursor: pointer;
     }
 
+
+#videoclip{
+    height: 100vh;
+    animation: opacidad 2s 4s linear forwards,
+                aparecerV 5s ease-in;
+}
+
+@keyframes aparecerV {
+    from{
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes desapareceDragable {
+    from{
+        
+        transform: scale(100%);
+    }
+
+    to{
+        transform: scale(0%);
+    }
+}
+
+@keyframes opacidad {
+    from{
+        opacity: 100%;
+    }
+
+    to{
+        opacity: 50%;
+    }
+}
+
 @keyframes aparecerBola {
     from{
-        opacity: 0;
+        transform: scale(0%);
     }
     to{
-        opacity: 100;
+        transform: scale(100%);
     }
 }
