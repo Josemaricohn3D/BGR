@@ -8,28 +8,32 @@
 </head>
 <body>
 
-    <div id="NombreUsuario" class="oculto">
-        <h1> Introduce tu nombre </h1>
+    <div id="portada">
 
-        <form id="espacioN">
-        <input id="usuario" type="text">
-        <input id="enviar" type="submit">
-        </form>
-    </div>
     
-    <div id="iniciar">
-         <img src="img/jugar.png" alt="Jugar_Bttn"> 
+        <div id="NombreUsuario" class="oculto">
+            <h1> Introduce tu nombre </h1>
+
+            <form id="espacioN" onsubmit="return false">
+            <input id="usuario" type="text" >
+            <input id="enviar" type="submit" value="Store To Session Storage" onclick="store()">
+            </form>
+        </div>
+        
+        <div id="iniciar">
+            <img src="img/jugar.png" alt="Jugar_Bttn"> 
+        </div>
+
+        <section id="titulo" >
+                <img id="B" src="img/BRITNEY_portada.png" alt="BRITNEY">
+                <img id="G" src="img/GOES_portada.png" alt="GOES">
+                <img id="R" src="img/ROCK_portada.png" alt="ROCK">
+        </section>
+
+        <video autoplay muted id="video" src="video/Britney Spears - I Love Rock 'N' Roll (Official HD Video).mp4" alt="Video_fondo"></video>
+        <audio id="cancionFondo" autoplay src="audio/INTRO.mp3"></audio>
+
     </div>
-
-    <section id="titulo" >
-            <img id="B" src="img/BRITNEY_portada.png" alt="BRITNEY">
-            <img id="G" src="img/GOES_portada.png" alt="GOES">
-            <img id="R" src="img/ROCK_portada.png" alt="ROCK">
-            <!-- <img id="PORTADA" src="img/mariposa_portada.png" alt=""> -->
-    </section>
-
-    <video autoplay muted id="video" src="video/Britney Spears - I Love Rock 'N' Roll (Official HD Video).mp4" alt="Video_fondo"></video>
-    <audio id="cancionFondo" autoplay src="audio/INTRO.mp3"></audio>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
