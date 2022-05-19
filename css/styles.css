@@ -175,15 +175,50 @@ body{
     
 
 
-#Mensaje{
-    width: 40%;
-    height: 80vh;
+#bienvenida{
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     border-radius: 10px;
-    margin: 0 auto;
-    z-index: 15;
-    background-color: red;
+    margin-left: -200%;
+    z-index: 20;
+    opacity: 100%;
+    /* background-color: red; */
 }
+
+    #bienvenida h1{
+        color: white;
+        font-size: 70px;
+        text-shadow: 10px 10px 25px rgb(77, 217, 18),
+                    -10px 10px 25px rgb(77, 217, 18),
+                    -10px -10px 25px rgb(77, 217, 18),
+                    10px -10px 25px rgb(77, 217, 18);  
+    }
+
+    #jugar{
+        cursor: pointer;
+        background-color: transparent;
+        background-image: url(/img/jugar.png);
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position-y: 50%;
+        background-position-x: 50%;
+        border: none;
+        border-radius: 5px;
+        width: 50%;
+        height: 100%;
+        transition: all 2s;
+        text-indent: -99999px;
+        transition: all 1s;
+    }
+
+    #jugar:hover{
+        transform: scale(200%);
+    }
 
 #NombreUsuario{
     position: absolute;
@@ -453,7 +488,9 @@ body{
     border-radius: 50%;
     background-color: red;
     position: absolute;
-    z-index: 6;
+    transform: scale(0%);
+    animation: boost 10s 25s linear,
+                desaparecerL 5s 26s linear forwards;
 }
 
     .circulos{
@@ -469,11 +506,45 @@ body{
         cursor: pointer;
     }
 
+#marco{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    opacity: 100%;
+}
+
+#marco img{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 .1rem rgb(255, 0, 0));
+}
+
 
 #videoclip{
     height: 100vh;
+    /* width: 100%; */
+    position: absolute;
     animation: opacidad 2s 4s linear forwards,
                 aparecerV 5s ease-in;
+}
+
+@keyframes desaparecerL {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
+    }
+}
+
+@keyframes boost {
+    from{
+        transform:scale(0%);
+    }
+
+    to{
+        transform: scale(1000%);
+    }
 }
 
 @keyframes aparecerV {

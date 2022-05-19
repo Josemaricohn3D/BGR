@@ -22,19 +22,20 @@ function aparecerNivel(){
     
 };
 
-// $( function() {
-//     $( "#dialog" ).dialog();
-//   } );
 
-// Saludar al usuario
-function saludar(){
-    alert("Hola, " + usuario.value + ". ¿Preparad@ para jugar? :)");
+
+// Bienvenida 
+function bienvenida(){
+    console.log(usuario.value)
+    $("#bienvenida").css("margin","0 auto");
+    $("#saludo").text("Bienvenid@, " + usuario.value + "!");
+    $("#NombreUsuario").css("display","none");
+    $("#video").css("opacity","40%")
 }
 
-formulario.addEventListener("submit", saludar);
 
-// setTimeout(aparecerNivel, 5000);
+formulario.addEventListener("submit", bienvenida);
 
-$("#enviar").click(aparecerNivel);
-
+$("#enviar").click(bienvenida);
+$("#jugar").click(aparecerNivel);
 
