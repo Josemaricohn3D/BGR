@@ -364,6 +364,43 @@ body{
     align-items: center;
 }
 
+/* BARRA DE PUNTOS */
+
+#puntuación{
+    width: 10%;
+    height: 70vh;
+    /* background-color: red; */
+    position: absolute;
+    right: 12%;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    #puntos{
+        position: absolute;
+        top: 0%;
+        font-size: 30px;
+        color: white;
+        font-family: rock;
+    }
+
+    #barra{
+        border-radius: 10px;
+        position: absolute;
+        bottom: 5%;
+        width: 90%;
+        height: 80%;
+        background-color: blue;
+    }
+        #barra img{
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+        }
+
 /* YOU DRIVE ME CRAZY */
     #circulo1{
         position: absolute;
@@ -510,6 +547,7 @@ body{
     width: 100%;
     height: 100vh;
     position: absolute;
+    z-index: 15;
     opacity: 100%;
 }
 
