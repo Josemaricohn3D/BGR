@@ -26,13 +26,19 @@ function aparecerNivel(){
 
 // Bienvenida 
 function bienvenida(){
-    console.log(usuario.value)
+    console.log(usuario.value);
     $("#bienvenida").css("margin","0 auto");
     $("#saludo").text("Bienvenid@, " + usuario.value + "!");
     $("#NombreUsuario").css("display","none");
     $("#video").css("opacity","40%")
 }
 
+function instrucciones(){
+    $("#reglas").css("margin","0 auto");
+    $("#bienvenida").css("display", "none");
+}
+
+$("#instrucciones").click(instrucciones);
 
 formulario.addEventListener("submit", bienvenida);
 

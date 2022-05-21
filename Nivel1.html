@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i1.sndcdn.com/artworks-oet4SzFMx35ItT7B-x5J0Nw-t500x500.jpg">
     <title>BritneyGoesRock</title>
 </head>
 <body>
 
     <div id="Nivel1">
-        
+
+        <button id="sincronizar" onClick="window.location.reload();">Sincronizar</button>
+
         <div id="marco">
             <img src="img/marco juego.png" alt="">
         </div>
-
+        
         <div id="puntuación">
-            <p id="puntos"> Hola </p>
+            <p id="puntos"> 0 </p>
             <div id="barra">
                 <img src="img/marco puntuación.png" alt="">
+                    <progress id="progreso" value="0" max="400"></progress>
+              
             </div>
         </div>
         
@@ -43,7 +48,13 @@
             <div id="dropable" ></div>
         </div>
 
-        
+        <div id="circulo13" class="circulos"></div>
+        <div id="circulo14" class="circulos"></div>
+        <div id="circulo15" class="circulos"></div>
+        <div id="circulo16" class="circulos"></div>
+        <div id="circulo17" class="circulos"></div>
+        <div id="circulo18" class="circulos"></div>
+        <div id="circulo19" class="circulos"></div>
     </div>
 
 
@@ -51,7 +62,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="script.js"></script>
     <script src="scriptNivel.js"></script>
 </body>
 </html>
