@@ -41,6 +41,33 @@ body{
         background-color: red;
     }
 
+    .atrasBttn{
+        width: 15%;
+        height: 15%;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position-y: 50%;
+        background-position-x: 50%;
+        background-image: url(/img/atras.png);
+        position: absolute;
+        left: -2%;
+        top: 0%;
+        border-radius: 10px 0px 10px 0px;
+    }
+
+    #atras{
+        left: -2%;
+        top: 0%;
+        
+    }
+
+    #atrasB{
+        left: 20%;
+        top: 0%;
+        filter: invert(100%);
+    }
+
     #iniciar{
         width: 25%;
         height: 30%;
@@ -121,6 +148,7 @@ body{
 }
 
 #NombreUsuario{
+    background-color: red;
     position: absolute;
     height: 50vh;
     width: 60%;
@@ -191,8 +219,8 @@ body{
 
 
 #bienvenida{
-    width: 50%;
-    height: 70vh;
+    width: 100%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,7 +235,7 @@ body{
 
     #bienvenida h1{
         color: white;
-        font-size: 70px;
+        font-size: 100px;
         text-shadow: 10px 10px 25px rgb(77, 217, 18),
                     -10px 10px 25px rgb(77, 217, 18),
                     -10px -10px 25px rgb(77, 217, 18),
@@ -219,13 +247,13 @@ body{
         background-color: transparent;
         background-image: url(/img/jugar.png);
         background-repeat: no-repeat;
-        background-size: 60%;
+        background-size: 40%;
         background-position-y: 50%;
         background-position-x: 50%;
         border: none;
         border-radius: 5px;
         width: 50%;
-        height: 100%;
+        height: 20%;
         transition: all 2s;
         text-indent: -99999px;
         transition: all 1s;
@@ -238,15 +266,15 @@ body{
     #instrucciones{
         cursor: pointer;
         background-color: transparent;
-        background-image: url(/img/jugar.png);
+        background-image: url(/img/reglas.png);
         background-repeat: no-repeat;
-        background-size: 60%;
+        background-size: 40%;
         background-position-y: 50%;
         background-position-x: 50%;
         border: none;
         border-radius: 5px;
         width: 50%;
-        height: 100%;
+        height: 20%;
         transition: all 2s;
         text-indent: -99999px;
         transition: all 1s;
@@ -256,7 +284,7 @@ body{
         transform: scale(200%);
     }
 
-#NombreUsuario{
+#Usuario{
     position: absolute;
     height: 50vh;
     width: 60%;
@@ -484,7 +512,10 @@ body{
         progress::-webkit-progress-value {
             border-radius: 10px;
             box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
-            background: red;
+            background-image: url(/img/barra\ textura.gif);
+            background-size: cover;
+            background-position-y: 50%;
+            background-repeat: no-repeat;
         }
 
 /* YOU DRIVE ME CRAZY */
@@ -624,7 +655,9 @@ body{
         left:20%;
         transform: scale(0%);
         border-radius: 50%;
-        background-color: rgb(255, 255, 255);
+        background-image: url(/img/circulos.png);
+        background-repeat: no-repeat;
+        background-size: cover;
         box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
         cursor: pointer;
     }
@@ -677,6 +710,21 @@ body{
 
 /* DECORACION Y VIDEO */
 
+#final{
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: -200%;
+    z-index: 25;
+    opacity: 100%;
+    background-color: red;
+}
+
 #marco{
     width: 100%;
     height: 100vh;
@@ -698,6 +746,15 @@ body{
     position: absolute;
     animation: opacidad 2s 4s linear forwards,
                 aparecerV 5s ease-in;
+}
+
+@keyframes bg-gradient {
+    from{
+        background-position-x: -100%;
+    }
+    to{
+        background-position-x: 100%;
+    }
 }
 
 @keyframes desaparecerL {

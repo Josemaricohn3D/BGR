@@ -1,47 +1,45 @@
-let boton = document.getElementById("iniciar");
-let titulo = document.getElementById("titulo");
-let pantallaNombre = document.getElementById("NombreUsuario");
-let usuario = document.getElementById("usuario");
-const formulario = document.getElementById("espacioN");
-let enviarN = document.getElementById("enviar");
-
 
 // Iniciar sesion
-function nombre(){
-    titulo.style.display = "none";
-    boton.style.display = "none"
-    pantallaNombre.style.left = "20%";
-}
-
-// ejecutar Iniciar Sesion
-boton.addEventListener("click", nombre);
+$("#iniciar").click(function(){
+    $("#titulo").css("display","none");
+    $("#iniciar").css("display","none");
+    $("#NombreUsuario").css("left","20%");
+})
 
 // Redireccion a nivel
-function aparecerNivel(){
+$("#jugar").click(function(){
     window.location.href = "Nivel1.html?"
     
-};
+});
 
+// BIENVENIDA
 
-
-// Bienvenida 
-function bienvenida(){
-    console.log(usuario.value);
+$("#enviar").click(function(){
     $("#bienvenida").css("margin","0 auto");
     $("#saludo").text("Bienvenid@, " + usuario.value + "!");
-    $("#NombreUsuario").css("display","none");
+    $("#NombreUsuario").css("left","-200%");
     $("#video").css("opacity","40%")
-}
+})
 
-function instrucciones(){
+// REGLAS
+
+$("#instrucciones").click(function(){
     $("#reglas").css("margin","0 auto");
-    $("#bienvenida").css("display", "none");
-}
+    $("#bienvenida").css("margin-left","-200%");
+})
 
-$("#instrucciones").click(instrucciones);
+// VOLVER ATRÁS INSTRUCCIONES
 
-formulario.addEventListener("submit", bienvenida);
+$("#atras").click(function(){
+    $("#reglas").css("margin-left","-200%");
+    $("#bienvenida").css("margin","0 auto");
+    $("#saludo").text("Bienvenid@, " + usuario.value + "!");
+})
 
-$("#enviar").click(bienvenida);
-$("#jugar").click(aparecerNivel);
+// VOLVER ATRAS BIENVENIDA
 
+$("#atrasB").click(function(){
+    $("#NombreUsuario").css("left","20%");
+    $("#bienvenida").css("margin-left", "-200%")
+
+})
