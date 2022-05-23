@@ -4,24 +4,38 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://i1.sndcdn.com/artworks-oet4SzFMx35ItT7B-x5J0Nw-t500x500.jpg">
+    <link rel="icon" href="img/circulos.png">
     <title>BritneyGoesRock</title>
 </head>
 <body>
 
     <div id="Nivel1">
 
-        <div id="final">
-            <p id="puntosFinal"></p>
+        <div id="reglas">
+            <div id="atras" class="atrasBttn">
+            </div>
         </div>
 
-        <button id="sincronizar" onClick="window.location.reload();">Sincronizar</button>
+        <div id="pausa">
+            <div id="atrasP" class="atrasBttn"></div>
+            <div id="salir" class="boton"></div>
+            <div id="controles" class="boton"></div>
+        </div>
+
+        <div id="final">
+            <p id="puntosFinal"></p>
+            <div id="clasificacion">
+                <img id="clasificacionIMG" src="img/A.png" alt="clasificacion">
+            </div>
+        </div>
+
+        <button id="sincronizar" class="boton" onClick="window.location.reload();">Sincronizar</button>
 
         <div id="marco">
             <img src="img/marco juego.png" alt="">
         </div>
         
-        <div id="puntuación">
+        <div id="puntuacion">
             <p id="puntos"> 0 </p>
             <div id="barra">
                 <img src="img/marco puntuación.png" alt="">
@@ -47,11 +61,7 @@
         <div id="circulo11" class="circulos"></div>
         <div id="circulo12" class="circulos"></div>
         
-        <div id="deslizar">
-            <div id="dragable" ></div>
-            <div id="dropable" ></div>
-        </div>
-
+        
         <div id="circulo13" class="circulos"></div>
         <div id="circulo14" class="circulos"></div>
         <div id="circulo15" class="circulos"></div>
@@ -59,11 +69,40 @@
         <div id="circulo17" class="circulos"></div>
         <div id="circulo18" class="circulos"></div>
         <div id="circulo19" class="circulos"></div>
+        <div id="circulo20" class="circulos"></div>
+        <div id="circulo21" class="circulos"></div>
+        <div id="circulo22" class="circulos"></div>
+        <div id="circulo23" class="circulos"></div>
+        <div id="circulo24" class="circulos"></div>
+        <div id="circulo25" class="circulos"></div>
+        <div id="circulo26" class="circulos"></div>
+        <div id="circulo27" class="circulos"></div>
+        <div id="circulo28" class="circulos"></div>
+        <div id="circulo29" class="circulos"></div>
+        <div id="circulo30" class="circulos"></div>
+        <div id="circulo31" class="circulos"></div>
+        <div id="circulo32" class="circulos"></div>
+        <div id="circulo33" class="circulos"></div>
+        <div id="circulo34" class="circulos"></div>
+        <div id="circulo35" class="circulos"></div>
+        <div id="circulo36" class="circulos"></div>
+        <div id="circulo37" class="circulos"></div>
+        <div id="circulo38" class="circulos"></div>
+        <div id="circulo39" class="circulos"></div>
+        <div id="circulo40" class="circulos"></div>
+        <div id="circulo41" class="circulos"></div>
+        <div id="circulo42" class="circulos"></div>
+        
+        <div id="deslizar">
+            <div id="dragable" ></div>
+            <div id="dropable" ></div>
+        </div>
     </div>
-
-
+    
     <video id="videoclip" autoplay src="video/videoclip juego_2.mp4"></video>
-
+    
+    <audio id="hoverAudio" class="audio_bttn" src="audio/hover_bttn.mp3"></audio>
+    <audio id="selectAudio" class="audio_bttn" src="audio/select_bttn.mp3"></audio>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="scriptNivel.js"></script>

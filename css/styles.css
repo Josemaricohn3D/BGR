@@ -3,6 +3,11 @@
     font-family: rock ;
     src: url(/fonts/Rocks\ Personal\ Use.ttf);
 }
+@font-face {
+    font-family: rock2 ;
+    src: url(/fonts/ApeMount-eZj0O.otf);
+}
+
 
 
 body{
@@ -36,7 +41,7 @@ body{
         position: absolute;
         border-radius: 10px;
         margin-left: -200%;
-        z-index: 20;
+        z-index: 28;
         opacity: 100%;
         background-color: red;
     }
@@ -62,11 +67,7 @@ body{
         
     }
 
-    #atrasB{
-        left: 20%;
-        top: 0%;
-        filter: invert(100%);
-    }
+    
 
     #iniciar{
         width: 25%;
@@ -148,7 +149,7 @@ body{
 }
 
 #NombreUsuario{
-    background-color: red;
+    /* background-color: red; */
     position: absolute;
     height: 50vh;
     width: 60%;
@@ -222,7 +223,7 @@ body{
     width: 100%;
     height: 80vh;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -233,7 +234,15 @@ body{
     /* background-color: red; */
 }
 
+    #atrasB{
+        left: 20%;
+        top: 0%;
+        filter: invert(100%);
+    }
+
     #bienvenida h1{
+        position: absolute;
+        top: 15%;
         color: white;
         font-size: 100px;
         text-shadow: 10px 10px 25px rgb(77, 217, 18),
@@ -244,19 +253,22 @@ body{
 
     #jugar{
         cursor: pointer;
-        background-color: transparent;
+        /* background-color: transparent; */
         background-image: url(/img/jugar.png);
         background-repeat: no-repeat;
-        background-size: 40%;
-        background-position-y: 50%;
+        background-size: 100%;
+        background-position-y: 30%;
         background-position-x: 50%;
         border: none;
         border-radius: 5px;
-        width: 50%;
+        width: 20%;
         height: 20%;
         transition: all 2s;
         text-indent: -99999px;
         transition: all 1s;
+        position: absolute;
+        bottom: 15%;
+        left: 25%;
     }
 
     #jugar:hover{
@@ -268,16 +280,19 @@ body{
         background-color: transparent;
         background-image: url(/img/reglas.png);
         background-repeat: no-repeat;
-        background-size: 40%;
-        background-position-y: 50%;
+        background-size: 100%;
+        background-position-y: 30%;
         background-position-x: 50%;
         border: none;
         border-radius: 5px;
-        width: 50%;
+        width: 20%;
         height: 20%;
         transition: all 2s;
         text-indent: -99999px;
         transition: all 1s;
+        position: absolute;
+        bottom: 15%;
+        right: 25%;
     }
 
     #instrucciones:hover{
@@ -356,7 +371,7 @@ body{
         }
         
         to{
-            box-shadow: 0px 0px 50px 20px rgb(255, 88, 205);
+            box-shadow: 0px 0px 50px 20px rgb(255, 186, 250);
         }
     }
 
@@ -416,6 +431,81 @@ body{
 
 /* NIVEL 1 */
 
+#Nivel1{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#blanco{
+    width: 100%;
+    height: 100vh;
+    opacity: 0%;
+    background-color: white;
+    animation: fondo 2s 6.5s linear forwards;
+}
+
+#pausa{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: -200%;
+    z-index: 25;
+    opacity: 100%;
+    background-blend-mode: hard-light;
+    background-image: url(/img/fondo_pausa.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+    #atrasP{
+        cursor: pointer;
+        filter: invert(100%);
+        top: 5%;
+        left: 2%;
+    }
+
+    #salir{
+        width: 15%;
+        height: 15%;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 50%;
+        background-position-x: 50%;
+        background-image: url(/img/salir.png);
+        transition: all 1s;
+    }
+
+    #salir:hover{
+        transform: scale(200%);
+    }
+
+    #controles{
+        width: 15%;
+        height: 15%;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 50%;
+        background-position-x: 50%;
+        background-image: url(/img/reglas.png);
+        transition: all 1s;
+    }
+
+    #controles:hover{
+        transform: scale(200%);
+    }
+
 #sincronizar{
     width: 15;
     height: 10vh;
@@ -433,21 +523,10 @@ body{
     
 }
 
-#Nivel1{
-    position: absolute;
-    z-index: 5;
-    /* background-color: red; */
-    width: 100%;
-    height: 100vh;
-    /* right: -100%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /* BARRA DE PUNTOS */
 
-#puntuación{
+#puntuacion{
     position: absolute;
     z-index: 20;
     left: 4%;
@@ -549,18 +628,21 @@ body{
     #circulo5{
         position: absolute;
         left: 30%;
+        bottom: 40%;
         animation: aparecerBola 1s 12s linear ;
     }
 
     #circulo6{
         position: absolute;
         left: 40%;
+        bottom: 35%;
         animation: aparecerBola 1s 12.2s linear ;
     }
     
     #circulo7{
         position: absolute;
         left: 50%;
+        bottom: 30%;
         animation: aparecerBola 1s 12.5s linear ;
     }
     
@@ -569,161 +651,372 @@ body{
     #circulo8{
         position: absolute;
         left: 70%;
+        bottom: 40%;
         animation: aparecerBola 1s 13s linear ;
     }
 
     #circulo9{
         position: absolute;
-        left: 80%;
+        left: 60%;
+        bottom: 45%;
         animation: aparecerBola 1s 13.5s linear ;
     }
 
 /* YEAH YEAH YEAH */
 
-#circulo10{
-    position: absolute;
-    left: 10%;
-    animation: aparecerBola 1s 15.5s linear ;
-}
+    #circulo10{
+        position: absolute;
+        left: 30%;
+        animation: aparecerBola 1s 15.5s linear ;
+    }
 
-#circulo11{
-    position: absolute;
-    left: 20%;
-    animation: aparecerBola 1s 16s linear ;
-}
+    #circulo11{
+        position: absolute;
+        left: 40%;
+        animation: aparecerBola 1s 16s linear ;
+    }
 
-#circulo12{
-    position: absolute;
-    left: 30%;
-    animation: aparecerBola 1s 16.5s linear ;
-}
+    #circulo12{
+        position: absolute;
+        left: 50%;
+        animation: aparecerBola 1s 16.5s linear ;
+    }
 
 /* UH, UH */
 
 
-#deslizar{
-    position: absolute;
-    z-index: 15;
-    margin: 0 auto;
-    width: 100%;
-    height: 100vh;
-    /* background-color: rgb(255, 0, 0); */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    animation: desapareceDragable 1s 22s linear forwards ;
-}
+    #deslizar{
+        position: absolute;
+        z-index: 15;
+        margin: 0 auto;
+        width: 100%;
+        height: 30vh;
+        /* background-color: rgb(255, 0, 0); */
+        background-image: url(/img/flecha.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        animation: aparecerBola 1s 17s linear backwards,
+                    desapareceDragable 1s 22s linear forwards ;
+    }
 
-#dragable{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
-    cursor: pointer;
-    animation: aparecerBola 1s 17s linear backwards ;
-}
-
-#dropable{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
-    cursor: pointer;
-    animation: aparecerBola 1s 17s linear backwards ;
-}
-
-/* LOCURA */
-
-#locura{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: red;
-    position: absolute;
-    transform: scale(0%);
-    animation: boost 10s 25s linear,
-                desaparecerL 5s 26s linear forwards;
-}
-
-    .circulos{
+    #dragable{
         width: 100px;
         height: 100px;
-        position: absolute;
-        z-index: 16;
-        left:20%;
-        transform: scale(0%);
         border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+        cursor: pointer;
+        animation: aparecerBola 1s 17s linear backwards ;
+    }
+
+
+    #dropable{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+        cursor: pointer;
+        animation: aparecerBola 1s 17s linear backwards ;
+    }
+
+    /* LOCURA */
+
+    #locura{
         background-image: url(/img/circulos.png);
         background-repeat: no-repeat;
         background-size: cover;
-        box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
-        cursor: pointer;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        /* background-color: red; */
+        box-shadow: 0px 0px 30px 20px inset red;
+        position: absolute;
+        transform: scale(0%);
+        animation: boost 10s 25s linear,
+                    desaparecerL 5s 26s linear forwards;
     }
+
+        .circulos{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            z-index: 16;
+            left:20%;
+            transform: scale(0%);
+            border-radius: 50%;
+            background-image: url(/img/circulos.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: invert(100%);
+            box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+            cursor: pointer;
+        }
 
 /* YOU DRIVE ME */
 
-#circulo13{
-    position: absolute;
-    left: 10%;
-    animation: aparecerBola 1s 30s linear ;
-}
+    #circulo13{
+        position: absolute;
+        left: 10%;
+        animation: aparecerBola 1s 30s linear ;
+    }
 
-#circulo14{
-    position: absolute;
-    left: 20%;
-    animation: aparecerBola 1s 30.5s linear ;
-}
+    #circulo14{
+        position: absolute;
+        left: 20%;
+        animation: aparecerBola 1s 30.5s linear ;
+    }
 
-#circulo15{
-    position: absolute;
-    left: 30%;
-    animation: aparecerBola 1s 31s linear ;
-}
+    #circulo15{
+        position: absolute;
+        left: 30%;
+        animation: aparecerBola 1s 31s linear ;
+    }
 
-/* CRAZY BA-BY */
+/* CRA-ZY BA-BY */
 
-#circulo16{
-    position: absolute;
-    left: 10%;
-    animation: aparecerBola 1s 31.5s linear ;
-}
+    #circulo16{
+        position: absolute;
+        left: 10%;
+        bottom: 40%;
+        animation: aparecerBola 1s 31.5s linear ;
+    }
 
-#circulo17{
-    position: absolute;
-    left: 20%;
-    animation: aparecerBola 1s 32s linear ;
-}
+    #circulo17{
+        position: absolute;
+        left: 20%;
+        bottom: 45%;
+        animation: aparecerBola 1s 32s linear ;
+    }
 
-#circulo18{
-    position: absolute;
-    left: 30%;
-    animation: aparecerBola 1s 32.5s linear ;
-}
+    #circulo18{
+        position: absolute;
+        left: 30%;
+        bottom: 50%;
+        animation: aparecerBola 1s 32.5s linear ;
+    }
 
-#circulo19{
-    position: absolute;
-    left: 40%;
-    animation: aparecerBola 1s 33s linear ;
-}
+    #circulo19{
+        position: absolute;
+        left: 40%;
+        bottom: 55%;
+        animation: aparecerBola 1s 33s linear ;
+    }
+
+ /* EXCITED  */
+
+    #circulo20{
+        position: absolute;
+        left: 80%;
+        bottom: 25%;
+        animation: aparecerBola 1s 34s linear ;
+    }
+
+    #circulo21{
+        position: absolute;
+        left: 70%;
+        bottom: 30%;
+        animation: aparecerBola 1s 34.5s linear ;
+    }
+
+    #circulo22{
+        position: absolute;
+        left: 60%;
+        bottom: 35%;
+        animation: aparecerBola 1s 35s linear ;
+    }
+
+/* IM IN TOO DEEP */
+
+    #circulo23{
+        position: absolute;
+        left: 50%;
+        bottom: 40%;
+        animation: aparecerBola 1s 36s linear ;
+    }
+
+    #circulo24{
+        position: absolute;
+        left: 40%;
+        bottom: 40%;
+        animation: aparecerBola 1s 36.5s linear ;
+    }
+
+
+    #circulo25{
+        position: absolute;
+        left: 30%;
+        bottom: 40%;
+        animation: aparecerBola 1s 37s linear ;
+    }
+
+    #circulo26{
+        position: absolute;
+        left: 20%;
+        bottom: 40%;
+        animation: aparecerBola 1s 37.5s linear ;
+    }
+
+/* OH OH OH */
+
+    #circulo27{
+        position: absolute;
+        left: 80%;
+        bottom: 50%;
+        animation: aparecerBola 1s 38s linear ;
+    }
+
+    #circulo28{
+        position: absolute;
+        left: 70%;
+        bottom: 50%;
+        animation: aparecerBola 1s 38.5s linear ;
+    }
+
+    #circulo29{
+        position: absolute;
+        left: 60%;
+        bottom: 50%;
+        animation: aparecerBola 1s 39s linear ;
+    }
+
+/* OH, MY IT FEELS ALRIGHT */
+
+    #circulo30{
+        position: absolute;
+        left: 10%;
+        animation: aparecerBola 1s 39.5s linear ;
+    }
+
+    #circulo31{
+        position: absolute;
+        left: 20%;
+        animation: aparecerBola 1s 40s linear ;
+    }
+
+
+    #circulo32{
+        position: absolute;
+        left: 30%;
+        animation: aparecerBola 1s 40.5s linear ;
+    }
+
+    #circulo33{
+        position: absolute;
+        left: 40%;
+        bottom: 40%;
+        animation: aparecerBola 1s 41s linear ;
+    }
+
+    #circulo34{
+        position: absolute;
+        left: 50%;
+        bottom: 35%;
+        animation: aparecerBola 1s 41.5s linear ;
+    }
+
+/* BABY THINKING OF YOU */
+
+    #circulo35{
+        position: absolute;
+        left: 80%;
+        bottom: 80%;
+        animation: aparecerBola 1s 43s linear ;
+    }
+
+    #circulo36{
+        position: absolute;
+        left: 70%;
+        bottom: 75%;
+        animation: aparecerBola 1s 43.5s linear ;
+    }
+
+    #circulo37{
+        position: absolute;
+        left: 60%;
+        bottom: 60%;
+        animation: aparecerBola 1s 44s linear ;
+    }
+
+    #circulo38{
+        position: absolute;
+        left: 50%;
+        bottom: 55%;
+        animation: aparecerBola 1s 44.5s linear ;
+    }
+
+/* KEEPS ME UP ALL NIGHT */
+
+    #circulo39{
+        position: absolute;
+        left: 40%;
+        bottom: 55%;
+        animation: aparecerBola 1s 45s linear ;
+    }
+
+    #circulo40{
+        position: absolute;
+        left: 30%;
+        bottom: 55%;
+        animation: aparecerBola 1s 45.5s linear ;
+    }
+
+    #circulo41{
+        position: absolute;
+        left: 20%;
+        bottom: 55%;
+        animation: aparecerBola 1s 46s linear ;
+    }
+
+    #circulo42{
+        position: absolute;
+        left: 10%;
+        bottom: 55%;
+        animation: aparecerBola 1s 46.5s linear ;
+    }
+
+
 
 /* DECORACION Y VIDEO */
 
 #final{
-    width: 80%;
-    height: 90vh;
+    width: 100%;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     border-radius: 10px;
-    margin-left: -200%;
+    margin-left: -300%;
     z-index: 25;
     opacity: 100%;
-    background-color: red;
+    /* background-color: red; */
 }
+
+    #puntosFinal{
+        font-family: rock2;
+        color: white;
+        z-index: 2;
+    }
+
+    #clasificacion{
+        width: 30%;
+        height: 40%;
+        position: absolute;
+        top: 20%;
+        z-index: 1;
+        animation: aparecer 1s cubic-bezier(.73,.19,.85,.21),
+                    opacidadTitulo 1s backwards cubic-bezier(1,.02,1,.24);
+        animation-play-state: paused;
+    }
+
+    #clasificacion img{
+        width: 100%;
+    }
 
 #marco{
     width: 100%;
@@ -741,11 +1034,28 @@ body{
 
 
 #videoclip{
-    height: 100vh;
+    width: 100%;
+    opacity: 50%;
     /* width: 100%; */
     position: absolute;
-    animation: opacidad 2s 4s linear forwards,
+    animation: opacidad 2s 4s linear,
                 aparecerV 5s ease-in;
+}
+
+
+.audio_bttn{
+    position: absolute;
+    opacity: 0%;
+    right: -200%;
+}
+
+@keyframes glowFlecha {
+    from{
+        filter: drop-shadow(0 0 .9rem rgb(10, 151, 5));
+    }
+    to{
+        filter: drop-shadow(0 0 .9rem rgb(255, 255, 255));
+    }
 }
 
 @keyframes bg-gradient {
@@ -813,5 +1123,15 @@ body{
     }
     to{
         transform: scale(100%);
+    }
+}
+
+@keyframes fondo {
+    from{
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 10%;
     }
 }

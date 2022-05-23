@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="icon" href="img/circulos.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Britney Goes Rock</title>
 </head>
@@ -17,23 +17,21 @@
         </div>
 
         <div id="bienvenida">
-            <div id="atrasB" class="atrasBttn">
-            </div>
+            <div id="atrasB" class="atrasBttn" class="boton"></div>
             <h1 id="saludo">Bienvenid@,</h1>
-            <input id="jugar" type="submit">
-            <input id="instrucciones" type="submit">
+            <div id="jugar" type="submit" class="boton"></div>
+            <div id="instrucciones" type="submit" class="boton"></div>
         </div>
 
         <div id="NombreUsuario">
             <h1> Introduce tu nombre </h1>
-
             <form id="espacioN" onsubmit="return false">
-            <input id="usuario" type="text" >
-            <input id="enviar" type="submit">
+                <input id="usuario" type="text" >
+                <input id="enviar" type="submit" class="boton">
             </form>
         </div>
         
-        <div id="iniciar">
+        <div id="iniciar" class="boton">
             <img src="img/jugar.png" alt="Jugar_Bttn"> 
         </div>
 
@@ -45,7 +43,8 @@
 
         <video autoplay muted id="video" src="video/Britney Spears - I Love Rock 'N' Roll (Official HD Video).mp4" alt="Video_fondo"></video>
         <audio id="cancionFondo" autoplay src="audio/INTRO.mp3"></audio>
-
+        <audio id="hoverAudio" class="audio_bttn" src="audio/hover_bttn.mp3"></audio>
+    <audio id="selectAudio" class="audio_bttn" src="audio/select_bttn.mp3"></audio>
     </div>
 
 

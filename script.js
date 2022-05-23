@@ -1,12 +1,12 @@
 
-// Iniciar sesion
+// INICIAR SESION
 $("#iniciar").click(function(){
     $("#titulo").css("display","none");
     $("#iniciar").css("display","none");
     $("#NombreUsuario").css("left","20%");
 })
 
-// Redireccion a nivel
+// REDIRECCION A NIVEL
 $("#jugar").click(function(){
     window.location.href = "Nivel1.html?"
     
@@ -43,3 +43,25 @@ $("#atrasB").click(function(){
     $("#bienvenida").css("margin-left", "-200%")
 
 })
+
+let audioHover = document.getElementById("hoverAudio");
+let audioClick = document.getElementById("selectAudio");
+
+$(".boton").mouseenter(function() {
+    audioHover.play();
+})
+
+$(".atrasBttn").mouseenter(function() {
+    audioHover.play();
+})
+
+$(".boton").click(function() {
+        audioClick.load();
+        audioClick.play();
+    })
+
+$(".atrasBttn").click(function() {
+    audioClick.load();
+    audioClick.play();
+})
+
