@@ -156,6 +156,12 @@ body{
         top: 0%;
     }
 
+    #atras2{
+        z-index: 2;
+        left: 0%;
+        top: 0%;
+    }
+
     #iniciar{
         width: 25%;
         height: 30%;
@@ -1084,7 +1090,37 @@ to{
     right: -200%;
 }
 
+#botonFinalizar{
+    width: 20%;
+    height: 20%;
+    /* background-color: red; */
+    position: absolute;
+    transform: scale(0%);
+    z-index: 30;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: botonF 1s 49s linear forwards;
+    cursor: pointer;
+}
+
+    #botonFinalizar p{
+        font-family: rock;
+        color: white;
+        font-size: 350%;
+    }
+
 /* KEYFRAMES NIVEL 1 */
+
+@keyframes botonF {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
 
 @keyframes glowFlecha {
     from{

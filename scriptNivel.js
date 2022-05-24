@@ -47,6 +47,8 @@ function teclaPulsada(e){
         $("#dragable").css("animationPlayState","paused");
         $("#dropable").css("animationPlayState","paused");
         $("#locura").css("animationPlayState","paused");
+        $("#final").css("animationPlayState","paused");
+        $("#botonFinalizar").css("animationPlayState","paused");
     }
 }
 
@@ -77,6 +79,8 @@ $("#atrasP").click(function(){
     $("#dragable").css("animationPlayState","running");
     $("#dropable").css("animationPlayState","running");
     $("#locura").css("animationPlayState","running");
+    $("#final").css("animationPlayState","running");
+    $("#botonFinalizar").css("animationPlayState","running");
 });
 
 
@@ -110,8 +114,8 @@ $(".atrasBttn").click(function() {
 $("#controles").click(function(){
     $("#reglas").css("margin","0 auto");
 })
-
-$("#atras").click(function(){
+// SALIR DE LAS INSTRUCCIONES
+$("#atras2").click(function(){
     $("#reglas").css("margin-left","-200%");
 });
 
@@ -124,7 +128,7 @@ $("#salir").click(function(){
 // PUNTUACION FINAL
 let final = document.getElementById("puntos");
 
-$("#circulo42").click(function(){
+function finalizar(){
 
     // APARECER PANATALLA FINAL
     $("#final").css("margin","0 auto");
@@ -148,12 +152,15 @@ $("#circulo42").click(function(){
     // DISPARAR ANIMACIÓN CLASIFICACIÓN
     $("#clasificacion").css("animationPlayState","running");
 
-    // QUITAR BARRA PUNTOS Y BOTON DE SINCRONIZAR
+    // QUITAR BARRA PUNTOS Y BOTON DE SINCRONIZAR Y DE FINALIZAR PARTIDA
     $("#puntuacion").css("display", "none");
     $("#sincronizar").css("display", "none");
     $("#videoclip").css("opacity","20%");
+    $("#botonFinalizar").css("display","none");
     
-});
+};
+$("#botonFinalizar").click(finalizar);
+$("#circulo42").click(finalizar);
 
 // SALIR A LA PANTALLA DE INICIO
 $("#salirFinal").click(function(){
@@ -161,35 +168,5 @@ $("#salirFinal").click(function(){
     
 });
 
-// TEMPORIZADOR PARA FINALIZAR SI NO SE HA DADO AL ÚLTIMO CÍRCULO
-function finalizar(){
 
- // APARECER PANATALLA FINAL
- $("#final").css("margin","0 auto");
- $("#final").css("animationPlayState","running");
 
- // TEXTO Y PUNTOS DE LA CLASIFICACIÓN SEGÚN LOS PUNTOS
- if (final.textContent == 300){
-     $("#puntosFinal").css("font-size","400%");
-     $("#puntosFinal").text( $("#puntos").text() + " puntos! GENIAL!");
-     $("#clasificacionIMG").attr("src","img/A.png");
- } else if (final.textContent >= 100){
-     $("#puntosFinal").css("font-size","250%");
-     $("#puntosFinal").text("¿" + $("#puntos").text() + " puntos? Venga, puedes conseguir mas!");
-     $("#clasificacionIMG").attr("src", "img/B.png");
- } else if (final.textContent <  100){
-     $("#puntosFinal").css("font-size","250%");
-     $("#puntosFinal").text( "¿" + $("#puntos").text() + " puntos? Vuelve a intentarlo hazme el favor");
-     $("#clasificacionIMG").attr("src", "img/C.png");
- }
-
- // DISPARAR ANIMACIÓN CLASIFICACIÓN
- $("#clasificacion").css("animationPlayState","running");
-
- // QUITAR BARRA PUNTOS Y BOTON DE SINCRONIZAR
- $("#puntuacion").css("display", "none");
- $("#sincronizar").css("display", "none");
- $("#videoclip").css("opacity","20%");
-};
-
-setTimeout(finalizar,49000);
