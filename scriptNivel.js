@@ -1,13 +1,11 @@
 
 // DESAPARECER CIRCULOS
-
 $(".circulos").click(function(){
     // Hacer desaparecer las bolas
     $(this).css("display", "none")
 });
 
 // DRAGABLE
-
 $("#dragable").draggable()
 $("#dropable").droppable({
 
@@ -16,10 +14,10 @@ $("#dropable").droppable({
         $("#deslizar").css("opacity","0%");
         // DAR PUNTOS SOLO HASTA QUE LA BARRA LLEGUE AL TOPE
         if (score.value < 300){
-            numeros.textContent = parseInt (numeros.textContent) + 5;
+            numeros.textContent = parseInt (numeros.textContent) + 10;
         }
         // AUMENTAR PUNTOS
-        score.value += 5;
+        score.value += 10;
     }
 });
 
@@ -35,10 +33,10 @@ function teclaPulsada(e){
         randomColorChange = '0px 0px 30px 20px inset #'+(Math.random()*0xFFFFFF<<0).toString(16);
         // DAR PUNTOS SOLO HASTA QUE LA BARRA LLEGUE AL TOPE
         if (score.value < 300){
-            numeros.textContent = parseInt (numeros.textContent) + 5;
+            numeros.textContent = parseInt (numeros.textContent) + 1;
         }
         // AUMENTAR BARRA DE PUNTOS
-        score.value += 5;
+        score.value += 1;
 
         // PARAR EL JUEGO Y LAS ANIMACIONES
     } else if(e.code == "Escape"){
@@ -91,66 +89,107 @@ let audioClick = document.getElementById("selectAudio");
 // SONIDO CON HOVER
 $(".boton").mouseenter(function() {
     audioHover.play();
-})
+});
 
 $(".atrasBttn").mouseenter(function() {
     audioHover.play();
-})
+});
 
 // SONIDO CON CLICK
 $(".boton").click(function() {
     audioClick.load();
     audioClick.play();
-})
+});
 
 $(".atrasBttn").click(function() {
     audioClick.load();
     audioClick.play();
-})
+});
 
 // INSTRUCCIONES
-
 $("#controles").click(function(){
     $("#reglas").css("margin","0 auto");
 })
 
 $("#atras").click(function(){
     $("#reglas").css("margin-left","-200%");
-})
+});
 
 // SALIR A LA PANTALLA DE INICIO
-
 $("#salir").click(function(){
-    window.location.href = "index.html"
+    window.location.href = "index.html";
     
 });
 
 // PUNTUACION FINAL
-
 let final = document.getElementById("puntos");
 
 $("#circulo42").click(function(){
+
     // APARECER PANATALLA FINAL
     $("#final").css("margin","0 auto");
+    $("#final").css("animationPlayState","running");
+
     // TEXTO Y PUNTOS DE LA CLASIFICACIÓN SEGÚN LOS PUNTOS
     if (final.textContent == 300){
         $("#puntosFinal").css("font-size","400%");
         $("#puntosFinal").text( $("#puntos").text() + " puntos! GENIAL!");
-        $("#clasificacionIMG").attr("src","img/A.png")
+        $("#clasificacionIMG").attr("src","img/A.png");
     } else if (final.textContent >= 100){
         $("#puntosFinal").css("font-size","250%");
         $("#puntosFinal").text("¿" + $("#puntos").text() + " puntos? Venga, puedes conseguir mas!");
-        $("#clasificacionIMG").attr("src", "img/B.png")
+        $("#clasificacionIMG").attr("src", "img/B.png");
     } else if (final.textContent <=  100){
         $("#puntosFinal").css("font-size","250%");
         $("#puntosFinal").text( "¿" + $("#puntos").text() + " puntos? Vuelve a intentarlo hazme el favor");
-        $("#clasificacionIMG").attr("src", "img/C.png")
+        $("#clasificacionIMG").attr("src", "img/C.png");
     }
+
     // DISPARAR ANIMACIÓN CLASIFICACIÓN
     $("#clasificacion").css("animationPlayState","running");
+
     // QUITAR BARRA PUNTOS Y BOTON DE SINCRONIZAR
     $("#puntuacion").css("display", "none");
     $("#sincronizar").css("display", "none");
     $("#videoclip").css("opacity","20%");
     
 });
+
+// SALIR A LA PANTALLA DE INICIO
+$("#salirFinal").click(function(){
+    window.location.href = "index.html";
+    
+});
+
+// TEMPORIZADOR PARA FINALIZAR SI NO SE HA DADO AL ÚLTIMO CÍRCULO
+function finalizar(){
+
+ // APARECER PANATALLA FINAL
+ $("#final").css("margin","0 auto");
+ $("#final").css("animationPlayState","running");
+
+ // TEXTO Y PUNTOS DE LA CLASIFICACIÓN SEGÚN LOS PUNTOS
+ if (final.textContent == 300){
+     $("#puntosFinal").css("font-size","400%");
+     $("#puntosFinal").text( $("#puntos").text() + " puntos! GENIAL!");
+     $("#clasificacionIMG").attr("src","img/A.png");
+ } else if (final.textContent >= 100){
+     $("#puntosFinal").css("font-size","250%");
+     $("#puntosFinal").text("¿" + $("#puntos").text() + " puntos? Venga, puedes conseguir mas!");
+     $("#clasificacionIMG").attr("src", "img/B.png");
+ } else if (final.textContent <  100){
+     $("#puntosFinal").css("font-size","250%");
+     $("#puntosFinal").text( "¿" + $("#puntos").text() + " puntos? Vuelve a intentarlo hazme el favor");
+     $("#clasificacionIMG").attr("src", "img/C.png");
+ }
+
+ // DISPARAR ANIMACIÓN CLASIFICACIÓN
+ $("#clasificacion").css("animationPlayState","running");
+
+ // QUITAR BARRA PUNTOS Y BOTON DE SINCRONIZAR
+ $("#puntuacion").css("display", "none");
+ $("#sincronizar").css("display", "none");
+ $("#videoclip").css("opacity","20%");
+};
+
+setTimeout(finalizar,49000);

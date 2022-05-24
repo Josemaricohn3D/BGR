@@ -11,11 +11,23 @@
 
     <div id="portada">
 
+        <!-- VIDEO INTRODUCCION -->
+        <video autoplay id="INTRO" src="video/INTRO.mp4"></video>
+
+        <!-- MENSAJE SUBIR VOLUMEN -->
+        <div id="mensaje">
+            <img id="altavoz" src="img/altavoz.png" alt="">
+            <p>¡Sube el volumen a tope!</p>
+        </div>
+
+        <!-- INSTRUCCIONES -->
         <div id="reglas">
             <div id="atras" class="atrasBttn">
             </div>
+            <img src="img/isntrucciones.png" alt="">
         </div>
 
+        <!-- SALUDO AL USUARIO -->
         <div id="bienvenida">
             <div id="atrasB" class="atrasBttn" class="boton"></div>
             <h1 id="saludo">Bienvenid@,</h1>
@@ -23,6 +35,7 @@
             <div id="instrucciones" type="submit" class="boton"></div>
         </div>
 
+        <!-- FORMUALRIO NOMBRE DE USUARIO -->
         <div id="NombreUsuario">
             <h1> Introduce tu nombre </h1>
             <form id="espacioN" onsubmit="return false">
@@ -31,20 +44,23 @@
             </form>
         </div>
         
+        <!-- EMPEZAR JUEGO -->
         <div id="iniciar" class="boton">
             <img src="img/jugar.png" alt="Jugar_Bttn"> 
         </div>
 
+        <!-- PORTADA -->
         <section id="titulo" >
                 <img id="B" src="img/BRITNEY_portada.png" alt="BRITNEY">
                 <img id="G" src="img/GOES_portada.png" alt="GOES">
                 <img id="R" src="img/ROCK_portada.png" alt="ROCK">
         </section>
 
-        <video autoplay muted id="video" src="video/Britney Spears - I Love Rock 'N' Roll (Official HD Video).mp4" alt="Video_fondo"></video>
-        <audio id="cancionFondo" autoplay src="audio/INTRO.mp3"></audio>
+        <!-- IMAGEN MARIPOSA, AUDIO Y SONIDOS HOVER Y SELECT -->
+        <img id="video" src="img/mariposa_portada.png" alt="">
+        <audio id="cancionFondo"  src="audio/INTRO.mp3"></audio>
         <audio id="hoverAudio" class="audio_bttn" src="audio/hover_bttn.mp3"></audio>
-    <audio id="selectAudio" class="audio_bttn" src="audio/select_bttn.mp3"></audio>
+        <audio id="selectAudio" class="audio_bttn" src="audio/select_bttn.mp3"></audio>
     </div>
 
 
