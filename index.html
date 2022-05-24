@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/circulos.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Britney Goes Rock</title>
+</head>
+<body>
+
+    <div id="portada">
+
+        <!-- VIDEO INTRODUCCION -->
+        <video autoplay id="INTRO" src="video/INTRO.mp4"></video>
+
+        <!-- MENSAJE SUBIR VOLUMEN -->
+        <div id="mensaje">
+            <img id="altavoz" src="img/altavoz.png" alt="">
+            <p>¡Sube el volumen a tope!</p>
+        </div>
+
+        <!-- INSTRUCCIONES -->
+        <div id="reglas">
+            <div id="atras" class="atrasBttn">
+            </div>
+            <img src="img/isntrucciones.png" alt="">
+        </div>
+
+        <!-- SALUDO AL USUARIO -->
+        <div id="bienvenida">
+            <div id="atrasB" class="atrasBttn" class="boton"></div>
+            <h1 id="saludo">Bienvenid@,</h1>
+            <div id="jugar" type="submit" class="boton"></div>
+            <div id="instrucciones" type="submit" class="boton"></div>
+        </div>
+
+        <!-- FORMUALRIO NOMBRE DE USUARIO -->
+        <div id="NombreUsuario">
+            <h1> Introduce tu nombre </h1>
+            <form id="espacioN" onsubmit="return false">
+                <input id="usuario" type="text" >
+                <input id="enviar" type="submit" class="boton">
+            </form>
+        </div>
+        
+        <!-- EMPEZAR JUEGO -->
+        <div id="iniciar" class="boton">
+            <img src="img/jugar.png" alt="Jugar_Bttn"> 
+        </div>
+
+        <!-- PORTADA -->
+        <section id="titulo" >
+                <img id="B" src="img/BRITNEY_portada.png" alt="BRITNEY">
+                <img id="G" src="img/GOES_portada.png" alt="GOES">
+                <img id="R" src="img/ROCK_portada.png" alt="ROCK">
+        </section>
+
+        <!-- IMAGEN MARIPOSA, AUDIO Y SONIDOS HOVER Y SELECT -->
+        <img id="video" src="img/mariposa_portada.png" alt="">
+        <audio id="cancionFondo"  src="audio/INTRO.mp3"></audio>
+        <audio id="hoverAudio" class="audio_bttn" src="audio/hover_bttn.mp3"></audio>
+        <audio id="selectAudio" class="audio_bttn" src="audio/select_bttn.mp3"></audio>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

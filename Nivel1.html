@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/circulos.png">
+    <title>BritneyGoesRock</title>
+</head>
+<body>
+
+    <div id="Nivel1">
+
+        <div id="botonFinalizar">
+            <p>Finalizar partida</p>
+        </div>
+
+        <!-- APARECER INSTRUCCIONES -->
+        <div id="reglas">
+            <div id="atras2" class="atrasBttn">
+            </div>
+            <img src="img/isntrucciones.png" alt="">
+        </div>
+
+        <!-- MENU DE PAUSA -->
+        <div id="pausa">
+            <div id="atrasP" class="atrasBttn"></div>
+            <div id="salir" class="boton"></div>
+            <div id="controles" class="boton"></div>
+        </div>
+
+        <!-- CLASIFICACION FINAL -->
+        <div id="final">
+            <p id="puntosFinal"></p>
+            <div id="clasificacion">
+                <img id="clasificacionIMG" src="img/A.png" alt="clasificacion">
+            </div>
+            <div id="salirFinal" class="boton"></div>
+        </div>
+
+        <!-- BOTON DE SINCRONIZAR/REFRESCAR -->
+        <button id="sincronizar" class="boton" onClick="window.location.reload();">Sincronizar</button>
+
+        <!--MARCO -->
+        <div id="marco">
+            <img src="img/marco juego.png" alt="">
+        </div>
+        
+        <!-- CONTADOR DE PUNTOS -->
+        <div id="puntuacion">
+            <p id="puntos"> 0 </p>
+            <div id="barra">
+                <img src="img/marco puntuación.png" alt="">
+                    <progress id="progreso" value="0" max="300"></progress>
+              
+            </div>
+        </div>
+        
+        <!-- MODO "LOCURA" -->
+        <div id="locura">
+            
+        </div>
+
+        <!-- CIRCULOS  -->
+        <div id="circulo1" class="circulos"></div>
+        <div id="circulo2" class="circulos"></div>
+        <div id="circulo3" class="circulos"></div>
+        <div id="circulo4" class="circulos"></div>
+        <div id="circulo5" class="circulos"></div>
+        <div id="circulo6" class="circulos"></div>
+        <div id="circulo7" class="circulos"></div>
+        <div id="circulo8" class="circulos"></div>
+        <div id="circulo9" class="circulos"></div>
+        <div id="circulo10" class="circulos"></div>
+        <div id="circulo11" class="circulos"></div>
+        <div id="circulo12" class="circulos"></div>
+        <div id="circulo13" class="circulos"></div>
+        <div id="circulo14" class="circulos"></div>
+        <div id="circulo15" class="circulos"></div>
+        <div id="circulo16" class="circulos"></div>
+        <div id="circulo17" class="circulos"></div>
+        <div id="circulo18" class="circulos"></div>
+        <div id="circulo19" class="circulos"></div>
+        <div id="circulo20" class="circulos"></div>
+        <div id="circulo21" class="circulos"></div>
+        <div id="circulo22" class="circulos"></div>
+        <div id="circulo23" class="circulos"></div>
+        <div id="circulo24" class="circulos"></div>
+        <div id="circulo25" class="circulos"></div>
+        <div id="circulo26" class="circulos"></div>
+        <div id="circulo27" class="circulos"></div>
+        <div id="circulo28" class="circulos"></div>
+        <div id="circulo29" class="circulos"></div>
+        <div id="circulo30" class="circulos"></div>
+        <div id="circulo31" class="circulos"></div>
+        <div id="circulo32" class="circulos"></div>
+        <div id="circulo33" class="circulos"></div>
+        <div id="circulo34" class="circulos"></div>
+        <div id="circulo35" class="circulos"></div>
+        <div id="circulo36" class="circulos"></div>
+        <div id="circulo37" class="circulos"></div>
+        <div id="circulo38" class="circulos"></div>
+        <div id="circulo39" class="circulos"></div>
+        <div id="circulo40" class="circulos"></div>
+        <div id="circulo41" class="circulos"></div>
+        <div id="circulo42" class="circulos"></div>
+        
+        <!-- DRAGABLE -->
+        <div id="deslizar">
+            <div id="dragable" ></div>
+            <div id="dropable" ></div>
+        </div>
+    </div>
+    
+    <!-- VIDEOCLIP DE FONDO -->
+    <video id="videoclip" autoplay src="video/videoclip juego_2.mp4"></video>
+    
+    <!-- AUDIO HOVER, SELECT -->
+    <audio id="hoverAudio" class="audio_bttn" src="audio/hover_bttn.mp3"></audio>
+    <audio id="selectAudio" class="audio_bttn" src="audio/select_bttn.mp3"></audio>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scriptNivel.js"></script>
+</body>
+</html>

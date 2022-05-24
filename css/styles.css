@@ -1,0 +1,1237 @@
+
+@font-face {
+    font-family: rock ;
+    src: url(/fonts/Rocks\ Personal\ Use.ttf);
+}
+@font-face {
+    font-family: rock2 ;
+    src: url(/fonts/ApeMount-eZj0O.otf);
+}
+
+/* CSS PORTADA */
+
+body{
+    margin: 0%;
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#INTRO{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 30;
+}
+
+#mensaje{
+    left: 3%;
+    top: 10%;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    opacity: 0%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-color: white;
+    background-color: grey;
+    animation: opacidadM 5s linear ;
+    animation-play-state: paused;
+}
+
+    #mensaje img{
+        height: 70%;
+    }
+
+    #mensaje p{
+        font-family: rock2;
+        color: white;
+
+    }
+
+
+#portada{
+    width: 100%;
+    height: 100vh;
+    display: block;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    #B{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 3;
+        /* opacity: 50%; */
+        /* background-color: red; */
+        filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
+        animation: aparecer 2s cubic-bezier(.73,.19,.85,.21),
+                    opacidadTitulo 2s backwards cubic-bezier(1,.02,1,.24);
+        animation-play-state: paused;
+    }
+
+    #G{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
+        animation: aparecer 3s 2s cubic-bezier(.73,.19,.85,.21),
+                    opacidadTitulo 2s 2s backwards cubic-bezier(1,.02,1,.24);
+        animation-play-state: paused;
+    }
+
+    #R{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        filter: drop-shadow(0 0 .5rem rgb(0, 0, 0));
+        animation: aparecer 2.5s 5s cubic-bezier(.73,.19,.85,.21),
+                    opacidadTitulo 2.5s 5s backwards cubic-bezier(1,.02,1,.24);
+        animation-play-state: paused;
+    }
+
+
+    #video{
+        height: 150vh;
+        /* background-color: red; */
+        z-index: -2;
+        position: absolute;
+        opacity: 0%;
+        animation: aparecerMariposa 2s 1s linear forwards;
+        animation-play-state: paused;
+    }
+
+    #reglas{
+        width: 80%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: -200%;
+        z-index: 28;
+        opacity: 100%;
+        /* background-color: red; */
+    }
+
+    #reglas img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .atrasBttn{
+        width: 15%;
+        height: 15%;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position-y: 50%;
+        background-position-x: 50%;
+        background-image: url(/img/atras.png);
+        position: absolute;
+        left: -2%;
+        top: 0%;
+        border-radius: 10px 0px 10px 0px;
+    }
+
+    #atras{
+        filter: invert(100%);
+        z-index: 2;
+        left: -13%;
+        top: 0%;
+    }
+
+    #atras2{
+        z-index: 2;
+        left: 0%;
+        top: 0%;
+    }
+
+    #iniciar{
+        width: 25%;
+        height: 30%;
+        position: absolute;
+        bottom: 10%;
+        z-index: 5;
+        cursor: pointer;
+        /* background-color: red; */
+        animation: botonJ 1s 7.5s linear alternate infinite,
+                    aparecerJ 1s 7.5s backwards ease-in;
+        animation-play-state: paused;
+
+    }
+
+    #iniciar img{
+        width: 100%;
+        filter: drop-shadow(0 0 .9rem rgb(10, 151, 5));
+        transition: 1s;
+    }
+
+    #iniciar:hover img{
+        transform: scale(120%);
+        filter: drop-shadow(0 0 .6rem rgb(60, 255, 0));
+    }
+    
+section{
+    /* background-color: red; */
+    margin-top: -10%;
+    height: 100vh;
+    width: 60%;
+    position: relative;
+}
+
+
+    #cancionFondo{
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+    }
+
+
+#NombreUsuario{
+    /* background-color: red; */
+    position: absolute;
+    height: 50vh;
+    width: 60%;
+    /* display: none; */
+    display: flex;
+    left: -100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+    #NombreUsuario h1{
+        font-family: rock;
+        color: rgb(255, 255, 255);
+        text-shadow: 5px 0px 0px rgb(111, 111, 111);
+        margin-top: 0%;
+        font-size: 150px;
+    }
+
+    #espacioN{
+        position: absolute;
+        /* background-color: blue; */
+        font-size: 20px;
+        bottom:20%;
+        width: 80%;
+        height: 20%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #usuario{
+        border: none;
+        border-radius: 20px;
+        padding-left: 10px;
+        box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+        width: 40%;
+        height: 50%;
+        color: white;
+        font-family: rock;
+        font-size: 50px;
+        background-color: transparent;
+        animation: glow .5s linear infinite alternate;
+    }
+
+    #enviar{
+        cursor: pointer;
+        background-color: transparent;
+        background-image: url(/img/jugar.png);
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position-y: 50%;
+        background-position-x: 50%;
+        border: none;
+        border-radius: 5px;
+        width: 50%;
+        height: 100%;
+        transition: all 2s;
+        cursor: pointer;
+        text-indent: -99999px;
+    }
+
+    #enviar:hover{
+        transform:scale(150%);
+    }
+    
+    
+#bienvenida{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: -200%;
+    z-index: 20;
+    opacity: 100%;
+    /* background-color: red; */
+}
+
+    #atrasB{
+        left: 5%;
+        top: 0%;
+        filter: invert(100%);
+    }
+
+    #bienvenida h1{
+        position: absolute;
+        top: 15%;
+        color: white;
+        font-size: 80px;
+        font-family: rock2;
+
+    }
+
+    #jugar{
+        cursor: pointer;
+        /* background-color: transparent; */
+        background-image: url(/img/jugar.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 30%;
+        background-position-x: 50%;
+        border: none;
+        border-radius: 5px;
+        width: 20%;
+        height: 20%;
+        transition: all 2s;
+        text-indent: -99999px;
+        transition: all 1s;
+        position: absolute;
+        bottom: 15%;
+        left: 25%;
+    }
+
+    #jugar:hover{
+        transform: scale(200%);
+    }
+
+    #instrucciones{
+        cursor: pointer;
+        background-color: transparent;
+        background-image: url(/img/reglas.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 30%;
+        background-position-x: 50%;
+        border: none;
+        border-radius: 5px;
+        width: 20%;
+        height: 20%;
+        transition: all 2s;
+        text-indent: -99999px;
+        transition: all 1s;
+        position: absolute;
+        bottom: 15%;
+        right: 25%;
+    }
+    
+    #instrucciones:hover{
+        transform: scale(200%);
+    }
+    
+
+/* KEYFRAMES PORTADA */
+    
+@keyframes glow {
+    from{
+        box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+    }
+    
+    to{
+        box-shadow: 0px 0px 50px 20px rgb(255, 186, 250);
+    }
+}
+
+
+@keyframes aparecerP {
+    from{
+    opacity: 0%;
+}
+
+to{
+    opacity: 100%;
+}
+}
+
+@keyframes mensaje {
+from{
+    transform: scale(50%);
+}
+to{
+    transform: scale(100%);
+}
+}
+
+@keyframes opacidadM {
+0%{
+    opacity: 0%;
+}
+30%{
+    opacity: 50%;
+}
+70%{
+    opacity: 100%;
+}
+100%{
+    opacity: 0%;
+}
+}
+
+
+@keyframes botonJ{
+from{
+    transform: rotate(30deg);
+}
+
+to{
+    transform: rotate(-30deg)
+}
+}
+
+@keyframes aparecerJ {
+from{
+    transform: scale(0%) ;
+}
+
+to{
+    transform: scale(100%);
+}
+}
+
+@keyframes aparecer {
+from{
+    transform: scale(500%) translateZ(-1000px);
+}
+
+to{
+    transform: scale(100%) translateZ(0px);
+}
+}
+
+@keyframes opacidadTitulo {
+from{
+    opacity: 0%;
+}
+
+to{
+    opacity: 100%;
+}
+}
+
+@keyframes aparecerMariposa {
+from{
+    opacity: 0%;
+}
+to{
+    opacity: 100%;
+}
+}
+
+
+
+
+/* CSS NIVEL 1 */
+
+#Nivel1{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pausa{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: -200%;
+    z-index: 25;
+    opacity: 100%;
+    background-blend-mode: hard-light;
+    background-image: url(/img/fondo_pausa.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+    #atrasP{
+        cursor: pointer;
+        filter: invert(100%);
+        top: 5%;
+        left: 2%;
+    }
+
+    #salir{
+        width: 15%;
+        height: 15%;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 50%;
+        background-position-x: 50%;
+        background-image: url(/img/salir.png);
+        transition: all 1s;
+    }
+
+    #salir:hover{
+        transform: scale(200%);
+    }
+
+    #controles{
+        width: 15%;
+        height: 15%;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 50%;
+        background-position-x: 50%;
+        background-image: url(/img/reglas.png);
+        transition: all 1s;
+    }
+
+    #controles:hover{
+        transform: scale(200%);
+    }
+
+#sincronizar{
+    width: 15;
+    height: 10vh;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    z-index: 20;
+    cursor: pointer;
+    font-family: rock;
+    color: rgb(0, 255, 42);
+    font-size: 50px;
+    
+}
+
+
+#puntuacion{
+    position: absolute;
+    z-index: 20;
+    left: 4%;
+    top: -5%;
+    width: 25%;
+    height: 35vh;
+    /* background-color: red; */
+    position: absolute;
+    right: 12%;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    #puntos{
+        /* position: absolute;
+        top: 0%; */
+        left: 0%;
+        font-size: 30px;
+        color: white;
+        /* background-color: blue; */
+    }
+
+    #barra{
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0%;
+        width: 90%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: blue; */
+    }
+        #barra img{
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            filter: invert(100%);
+        }
+
+        progress {
+            width: 100%;
+            height: 100%;
+            display: block;
+            /* Important Thing */
+            -webkit-appearance: none;
+            border: none;
+            position: absolute;
+            z-index: -1;
+        }
+        
+        progress::-webkit-progress-bar {
+            background: black;
+            border-radius: 10px;
+            padding: 2px;
+            box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2) inset;
+        }
+        
+        progress::-webkit-progress-value {
+            border-radius: 10px;
+            box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+            background-image: url(/img/barra\ textura.gif);
+            background-size: cover;
+            background-position-y: 50%;
+            background-repeat: no-repeat;
+        }
+
+/* CIRCULOS DIVIDIDOS POR VERSOS */
+
+/* YOU DRIVE ME CRAZY */
+    #circulo1{
+        position: absolute;
+        left: 10%;
+        animation: aparecerBola 1s 7s linear ;
+    }
+    #circulo2{
+        position: absolute;
+        left: 30%;
+        animation: aparecerBola 1s 7.8s linear;
+    }
+
+    #circulo3{
+        position: absolute;
+        left: 50%;
+        animation: aparecerBola 1s 8.6s linear ;
+    }
+
+/* SING IT! */
+
+    #circulo4{
+        position: absolute;
+        left: 20%;
+        animation: aparecerBola 1s 11.5s linear ;
+    }
+
+/* OH OH OH */
+
+    #circulo5{
+        position: absolute;
+        left: 30%;
+        bottom: 40%;
+        animation: aparecerBola 1s 12s linear ;
+    }
+
+    #circulo6{
+        position: absolute;
+        left: 40%;
+        bottom: 35%;
+        animation: aparecerBola 1s 12.2s linear ;
+    }
+    
+    #circulo7{
+        position: absolute;
+        left: 50%;
+        bottom: 30%;
+        animation: aparecerBola 1s 12.5s linear ;
+    }
+    
+/* CRA-ZY */
+
+    #circulo8{
+        position: absolute;
+        left: 70%;
+        bottom: 40%;
+        animation: aparecerBola 1s 13s linear ;
+    }
+
+    #circulo9{
+        position: absolute;
+        left: 60%;
+        bottom: 45%;
+        animation: aparecerBola 1s 13.5s linear ;
+    }
+
+/* YEAH YEAH YEAH */
+
+    #circulo10{
+        position: absolute;
+        left: 30%;
+        animation: aparecerBola 1s 15.5s linear ;
+    }
+
+    #circulo11{
+        position: absolute;
+        left: 40%;
+        animation: aparecerBola 1s 16s linear ;
+    }
+
+    #circulo12{
+        position: absolute;
+        left: 50%;
+        animation: aparecerBola 1s 16.5s linear ;
+    }
+
+/* UH, UH */
+
+
+    #deslizar{
+        position: absolute;
+        z-index: 15;
+        margin: 0 auto;
+        width: 80%;
+        height: 30vh;
+        /* background-color: rgb(255, 0, 0); */
+        background-image: url(/img/flecha.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: aparecerBola 1s 17s linear backwards,
+                    desapareceDragable 1s 22s linear forwards ;
+    }
+
+    #dragable{
+        position: absolute;
+        left: 0%;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+        cursor: pointer;
+        animation: aparecerBola 1s 17s linear backwards,
+                    
+    }
+
+
+    #dropable{
+        position: absolute;
+        right: 0%;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+        cursor: pointer;
+        animation: aparecerBola 1s 17s linear backwards;
+    }
+
+/* LOCURA */
+
+    #locura{
+        background-image: url(/img/circulos.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        /* background-color: red; */
+        box-shadow: 0px 0px 30px 20px inset red;
+        position: absolute;
+        transform: scale(0%);
+        animation: boost 10s 25s linear,
+                    desaparecerL 5s 26s linear forwards;
+    }
+
+        .circulos{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            z-index: 16;
+            left:20%;
+            transform: scale(0%);
+            border-radius: 50%;
+            background-image: url(/img/circulos.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: invert(100%);
+            box-shadow: 0px 0px 30px 20px rgb(255, 0, 179);
+            cursor: pointer;
+        }
+
+/* YOU DRIVE ME */
+
+    #circulo13{
+        position: absolute;
+        left: 10%;
+        animation: aparecerBola 1s 30s linear ;
+    }
+
+    #circulo14{
+        position: absolute;
+        left: 20%;
+        animation: aparecerBola 1s 30.5s linear ;
+    }
+
+    #circulo15{
+        position: absolute;
+        left: 30%;
+        animation: aparecerBola 1s 31s linear ;
+    }
+
+/* CRA-ZY BA-BY */
+
+    #circulo16{
+        position: absolute;
+        left: 10%;
+        bottom: 40%;
+        animation: aparecerBola 1s 31.5s linear ;
+    }
+
+    #circulo17{
+        position: absolute;
+        left: 20%;
+        bottom: 45%;
+        animation: aparecerBola 1s 32s linear ;
+    }
+
+    #circulo18{
+        position: absolute;
+        left: 30%;
+        bottom: 50%;
+        animation: aparecerBola 1s 32.5s linear ;
+    }
+
+    #circulo19{
+        position: absolute;
+        left: 40%;
+        bottom: 55%;
+        animation: aparecerBola 1s 33s linear ;
+    }
+
+ /* EXCITED  */
+
+    #circulo20{
+        position: absolute;
+        left: 80%;
+        bottom: 25%;
+        animation: aparecerBola 1s 34s linear ;
+    }
+
+    #circulo21{
+        position: absolute;
+        left: 70%;
+        bottom: 30%;
+        animation: aparecerBola 1s 34.5s linear ;
+    }
+
+    #circulo22{
+        position: absolute;
+        left: 60%;
+        bottom: 35%;
+        animation: aparecerBola 1s 35s linear ;
+    }
+
+/* IM IN TOO DEEP */
+
+    #circulo23{
+        position: absolute;
+        left: 50%;
+        bottom: 40%;
+        animation: aparecerBola 1s 36s linear ;
+    }
+
+    #circulo24{
+        position: absolute;
+        left: 40%;
+        bottom: 40%;
+        animation: aparecerBola 1s 36.5s linear ;
+    }
+
+
+    #circulo25{
+        position: absolute;
+        left: 30%;
+        bottom: 40%;
+        animation: aparecerBola 1s 37s linear ;
+    }
+
+    #circulo26{
+        position: absolute;
+        left: 20%;
+        bottom: 40%;
+        animation: aparecerBola 1s 37.5s linear ;
+    }
+
+/* OH OH OH */
+
+    #circulo27{
+        position: absolute;
+        left: 80%;
+        bottom: 50%;
+        animation: aparecerBola 1s 38s linear ;
+    }
+
+    #circulo28{
+        position: absolute;
+        left: 70%;
+        bottom: 50%;
+        animation: aparecerBola 1s 38.5s linear ;
+    }
+
+    #circulo29{
+        position: absolute;
+        left: 60%;
+        bottom: 50%;
+        animation: aparecerBola 1s 39s linear ;
+    }
+
+/* OH, MY IT FEELS ALRIGHT */
+
+    #circulo30{
+        position: absolute;
+        left: 10%;
+        animation: aparecerBola 1s 39.5s linear ;
+    }
+
+    #circulo31{
+        position: absolute;
+        left: 20%;
+        animation: aparecerBola 1s 40s linear ;
+    }
+
+
+    #circulo32{
+        position: absolute;
+        left: 30%;
+        animation: aparecerBola 1s 40.5s linear ;
+    }
+
+    #circulo33{
+        position: absolute;
+        left: 40%;
+        bottom: 40%;
+        animation: aparecerBola 1s 41s linear ;
+    }
+
+    #circulo34{
+        position: absolute;
+        left: 50%;
+        bottom: 35%;
+        animation: aparecerBola 1s 41.5s linear ;
+    }
+
+/* BABY THINKING OF YOU */
+
+    #circulo35{
+        position: absolute;
+        left: 80%;
+        bottom: 80%;
+        animation: aparecerBola 1s 43s linear ;
+    }
+
+    #circulo36{
+        position: absolute;
+        left: 70%;
+        bottom: 75%;
+        animation: aparecerBola 1s 43.5s linear ;
+    }
+
+    #circulo37{
+        position: absolute;
+        left: 60%;
+        bottom: 60%;
+        animation: aparecerBola 1s 44s linear ;
+    }
+
+    #circulo38{
+        position: absolute;
+        left: 50%;
+        bottom: 55%;
+        animation: aparecerBola 1s 44.5s linear ;
+    }
+
+/* KEEPS ME UP ALL NIGHT */
+
+    #circulo39{
+        position: absolute;
+        left: 40%;
+        bottom: 55%;
+        animation: aparecerBola 1s 45s linear ;
+    }
+
+    #circulo40{
+        position: absolute;
+        left: 30%;
+        bottom: 55%;
+        animation: aparecerBola 1s 45.5s linear ;
+    }
+
+    #circulo41{
+        position: absolute;
+        left: 20%;
+        bottom: 55%;
+        animation: aparecerBola 1s 46s linear ;
+    }
+
+    #circulo42{
+        position: absolute;
+        left: 10%;
+        bottom: 55%;
+        animation: aparecerBola 1s 46.5s linear ;
+    }
+
+
+
+
+#final{
+    opacity: 0%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: -300%;
+    z-index: 25;
+    opacity: 100%;
+    /* background-color: red; */
+    animation: aparecerFinal 2s ease-in forwards;
+    animation-play-state: paused;
+}
+
+    #puntosFinal{
+        font-family: rock2;
+        color: white;
+        z-index: 2;
+    }
+
+    #clasificacion{
+        width: 25%;
+        height: 20%;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        z-index: 1;
+        animation: aparecer 1s cubic-bezier(.73,.19,.85,.21),
+                    opacidadTitulo 1s backwards cubic-bezier(1,.02,1,.24),
+                    botar 1s 1s linear infinite alternate;
+        animation-play-state: paused;
+    }
+
+    #clasificacion img{
+        width: 100%;
+    }
+
+    #salirFinal{
+        width: 15%;
+        height: 15%;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 50%;
+        background-position-x: 50%;
+        background-image: url(/img/salir.png);
+        transition: all 1s;
+    }
+
+    #salirFinal:hover{
+        transform: scale(150%);
+    }
+
+#marco{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 15;
+    opacity: 100%;
+}
+
+#marco img{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 .1rem rgb(255, 0, 0));
+}
+
+
+#videoclip{
+    width: 100%;
+    opacity: 50%;
+    /* width: 100%; */
+    position: absolute;
+    animation: opacidad 2s 4s linear,
+                aparecerV 5s ease-in;
+}
+
+
+.audio_bttn{
+    position: absolute;
+    opacity: 0%;
+    right: -200%;
+}
+
+#botonFinalizar{
+    width: 20%;
+    height: 20%;
+    /* background-color: red; */
+    position: absolute;
+    transform: scale(0%);
+    z-index: 30;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: botonF 1s 49s linear forwards;
+    cursor: pointer;
+}
+
+    #botonFinalizar p{
+        font-family: rock;
+        color: white;
+        font-size: 350%;
+    }
+
+/* KEYFRAMES NIVEL 1 */
+
+@keyframes botonF {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
+
+@keyframes glowFlecha {
+    from{
+        filter: drop-shadow(0 0 .9rem rgb(10, 151, 5));
+    }
+    to{
+        filter: drop-shadow(0 0 .9rem rgb(255, 255, 255));
+    }
+}
+
+@keyframes bg-gradient {
+    from{
+        background-position-x: -100%;
+    }
+    to{
+        background-position-x: 100%;
+    }
+}
+
+@keyframes desaparecerL {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
+    }
+}
+
+@keyframes boost {
+    from{
+        transform:scale(0%);
+    }
+
+    to{
+        transform: scale(1000%);
+    }
+}
+
+@keyframes aparecerV {
+    from{
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes desapareceDragable {
+    from{
+        
+        transform: scale(100%);
+    }
+
+    to{
+        transform: scale(0%);
+    }
+}
+
+@keyframes opacidad {
+    from{
+        opacity: 100%;
+    }
+
+    to{
+        opacity: 50%;
+    }
+}
+
+@keyframes aparecerBola {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
+
+@keyframes fondo {
+    from{
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 10%;
+    }
+}
+
+@keyframes botar {
+    from{
+        transform: scale(100%);
+    }
+    to{
+        transform:scale(50%);
+    }
+}
+
+@keyframes aparecerFinal {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes desapareceBola {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
+    }
+}
